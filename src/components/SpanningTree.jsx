@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { graphNodes, graphEdges, dfsSpanningTree, bfsSpanningTree, getAllNodeIds } from '../data/campusData';
+import { mainGraphNodes as graphNodes, mainGraphEdges as graphEdges, dfsSpanningTree, bfsSpanningTree, getAllMainNodeIds as getAllNodeIds } from '../data/campusData';
 
 const SCALE = 0.95;
 
@@ -9,7 +9,7 @@ function scalePos(nodes) {
 
 export default function SpanningTree() {
     const [method, setMethod] = useState('dfs');
-    const [startNode, setStartNode] = useState('campus');
+    const [startNode, setStartNode] = useState('central_lawn');
     const [showSpanning, setShowSpanning] = useState(false);
 
     const scaledNodes = useMemo(() => scalePos(graphNodes), []);

@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { graphNodes, graphEdges, dijkstra, getAllNodeIds, getNodeName } from '../data/campusData';
+import { mainGraphNodes as graphNodes, mainGraphEdges as graphEdges, dijkstra, getAllMainNodeIds as getAllNodeIds, getNodeName } from '../data/campusData';
 
 const SCALE = 0.95;
 function scalePos(nodes) {

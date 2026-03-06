@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './App.css'
 import CampusTree from './components/CampusTree'
 import TreeTraversals from './components/TreeTraversals'
 import SpanningTree from './components/SpanningTree'
@@ -18,6 +19,7 @@ function App() {
   const ActiveComponent = TABS.find(t => t.id === activeTab)?.component
 
   return (
+    <div className="app-container">
     <div className="app">
       <header className="app-header">
         <div>
@@ -42,6 +44,7 @@ function App() {
       <main className="tab-content">
         {ActiveComponent && <ActiveComponent />}
       </main>
+    </div>
     </div>
   )
 }

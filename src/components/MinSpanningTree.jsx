@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
-import { graphNodes, graphEdges, kruskalMST, primMST, getAllNodeIds, getNodeName } from '../data/campusData';
+import { mainGraphNodes as graphNodes, mainGraphEdges as graphEdges, kruskalMST, primMST, getAllMainNodeIds as getAllNodeIds, getNodeName } from '../data/campusData';
 
 const SCALE = 0.95;
 function scalePos(nodes) {
@@ -8,7 +8,7 @@ function scalePos(nodes) {
 
 export default function MinSpanningTree() {
     const [algorithm, setAlgorithm] = useState('kruskal');
-    const [startNode, setStartNode] = useState('campus');
+    const [startNode, setStartNode] = useState('central_lawn');
     const [currentStep, setCurrentStep] = useState(-1);
     const [isPlaying, setIsPlaying] = useState(false);
     const [speed, setSpeed] = useState(800);
